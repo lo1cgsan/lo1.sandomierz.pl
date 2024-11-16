@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="pl"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="pl" class="no-js"> <![endif]-->
+<html lang="pl">
+
+<head>
+    {% block head %}
+    <!-- tytuł -->
+    <title>{% block title %} {{ page.title }} &lt; {{ site.title }} {% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Strona archiwalna I LO Collegium Gostomianum w Sandomierzu.">
+    <meta name="keywords" content="Collegium Gostomianum, Liceum Ogólnokształcące, Sandomierz, lo1, 1lo, Patkowski">
+    <meta name="robots" content="all">
+
+    <!-- CSS: Bootstrap, Font Awesome, OWL Carousel, Animate  -->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/font-awesome/css/font-awesome.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/owl.carousel.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/owl.theme.default.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/animate.css" type="text/css" media="screen">
+
+    <!-- CSS: podstawowe, responsywność, temat czerwony  -->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/red.css" type="text/css" media="screen">
+
+    <link rel="icon" href="{{ SITEURL }}/theme/images/favicon.png" type="image/png">
+    <script src="{{ SITEURL }}/theme/assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/assets/css/cookieconsent.min.css" type="text/css">
+    <script src="{{ SITEURL }}/theme/assets/js/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+        "palette": {
+        "popup": {
+            "background": "#aa0000",
+            "text": "#ffdddd"
+        },
+        "button": {
+            "background": "#ff0000"
+        }
+        },
+        "content": {
+        "message": "Używamy plików cookie (ciasteczek), aby strony działały lepiej. Nie zbieramy żadnych danych pozwalających identyfikować użytkownika.",
+        "dismiss": "Rozumiem",
+        "link": "Więcej informacji »»»",
+        "href": "https://wszystkoociasteczkach.pl"
+        }
+    })});
+    </script>
+
+    <!--[if IE 8]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="canonical" href="https://lo1.sandomierz.pl/cgarch/">
+    {% endblock head %}
+</head>
+
+<body id="{{ page.slug }}">
+    <noscript>
+        Do pełnej funkcjonalności strony potrzebujesz włączonej obsługi skryptów.
+        Tu znajdziesz <a href="https://www.enable-javascript.com/pl/" target="_blank">
+        instrukcje, które pozwolą Ci włączyć skrypty w Twojej przeglądarce</a>.
+    </noscript>
+<!--[if lte IE 8]>
+  <div>
+    <p>Używasz przeglądarki Internet Explorer 6 lub 7, które ze względu na podatność na ataki złośliwego oprogramowania zostały wycofane.<br />
+    Zainstaluj IE w wersji 8 lub wyższej, albo wypróbuj lepsze programy:
+    <a rel="nofollow" href="https://www.mozilla.org/pl/">Mozilla Firefox</a>,
+    <a rel="nofollow" href="https://brave.com/pl/">Brave Browser</a>.
+    </p>
+  </div>
+<![endif]-->
+
+<header class="clearfix">
+    <div class="top-bar py-2">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-9">
+            <ul>
+              <li><i class="fa fa-map-marker"></i>ul. J. Długosza 7, 27-600 Sandomierz |</li>
+              <li><i class="fa fa-envelope-o"></i>
+                <a href="mailto:&#108;&#111;&#49;&#115;&#97;&#110;&#100;&#64;&#108;&#111;&#49;&#46;&#115;&#97;&#110;&#100;&#111;&#109;&#105;&#101;&#114;&#122;&#46;&#112;&#108;">&#108;&#111;&#49;&#115;&#97;&#110;&#100;&#64;&#108;&#111;&#49;&#46;&#115;&#97;&#110;&#100;&#111;&#109;&#105;&#101;&#114;&#122;&#46;&#112;&#108;</a> |
+              </li>
+              <li><i class="fa fa-phone"></i>(15) 832-52-45</li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="d-flex justify-content-end">
+              <li>
+                <a href="https://lo1.sandomierz.pl"><i class="fa fa-university"></i><span class="d-none d-sm-inline-flex">&nbsp;Strona główna</span></a>
+              </li>
+              <li>&nbsp;&nbsp;<img src="{{ SITEURL }}/theme/images/godlo.png" alt="Godło Rezczpospolitej" width="20" height="20"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <nav class="navbar navbar-expand-md">
+    <div class="container-xl">
+
+          <a class="navbar-brand" href="{{ SITEURL }}">
+            <img id="logoCG" src="{{ SITEURL }}/theme/images/CG_logo_2019.png" alt="Logo Collegium Gostomianum">
+          </a>
+          <div class="mt-auto">
+            <a class="navbar-brand d-none d-lg-block logoo" href="{{ SITEURL }}">I Liceum Ogólnokształcące<br>Collegium Gostomianum</a>
+          </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Przełącz nawigację">
+          <span class="fa fa-bars"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            {% for title, link in MENUITEMS %}
+            <li class="nav-link {{ link }}">
+                <a href="{{ link }}}" title="{{ title }}" {% if output_file == "index.html" %} class="active"{% endif %}>{{ title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+  </nav>
+  </header>

@@ -1,5 +1,5 @@
 AUTHOR = 'Robert Bednarz'
-SITENAME = 'I LO Coolegium w Sandomierzu'
+SITENAME = 'I LO Colegium Gostomianum w Sandomierzu'
 SITEURL = ""
 
 PATH = "content"
@@ -33,3 +33,17 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+DEFAULT_CATEGORY = 'informacja'
+
+ARTICLE_PATHS = ['articles',]
+ARTICLE_URL = 'articles/{slug}_{rok}.html'
+ARTICLE_SAVE_AS = 'articles/{slug}_{rok}.html'
+
+
+MENUITEMS = ( 
+    ('Archiwum', '/'),
+    ('Działania', '/dzialania'),
+    ('Olimpiady', '/olimpiady'),
+    ('Szkoła', '/szkola'),
+)
